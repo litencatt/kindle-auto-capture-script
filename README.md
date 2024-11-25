@@ -1,0 +1,1 @@
+# mac-kindle-auto-capture-script
