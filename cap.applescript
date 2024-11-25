@@ -50,10 +50,10 @@ repeat with i from spage to pages
 	else if i < 10000000 then
 		set dp to "0" & i
 	end if
-	
+
 	set spath to (savepath & "p" & dp & ".png")
 	do shell script "screencapture -x " & spath
-	
+
 	if cropx is not 0 and cropy is not 0 then
 		if resizew is not 0 then
 			do shell script "sips -c " & cropy & " " & cropx & " --resampleWidth " & resizew & " " & spath & " --out " & spath
@@ -63,11 +63,11 @@ repeat with i from spage to pages
 			do shell script sipsCommand
 		end if
 	end if
-	
+
 	tell application "System Events"
 		keystroke keychar
 	end tell
-	
+
 	delay pausetime
 end repeat
 activate
