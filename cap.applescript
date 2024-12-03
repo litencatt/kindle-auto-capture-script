@@ -14,21 +14,6 @@ set pagedir to 2
 -- ページめくりウエイト(秒)
 set pausetime to 1.0
 
--- 切り抜き画像offset(左上から)
-set offsetx to 100
-set offsety to 180
-set cropOffSet to " --cropOffset " & offsety & " " & offsetx & " "
-log cropOffSet
-
--- 切り抜きサイズ(左上からから)
-set cropx to 3200
-set cropy to 1950
-set cropXy to " -c " & cropy & " " & cropx & " "
-log cropXy
-
--- リサイズ横(切り抜く前のサイズ換算=画面横/切り抜き横*仕上がり横)
-set resizew to 0
-
 if pagedir = 1 then
 	set keychar to (ASCII character 28)
 else
@@ -51,16 +36,6 @@ repeat with i from spage to pages
 
 	set spath to (savepath & "p" & dp & ".png")
 	do shell script "screencapture -x " & spath
-
-	if cropx is not 0 and cropy is not 0 then
-		if resizew is not 0 then
-			do shell script "sips -c " & cropy & " " & cropx & " --resampleWidth " & resizew & " " & spath & " --out " & spath
-		else
-			set sipsCommand to "sips " & cropOffSet & " " & cropXy & " " & spath & " --out " & spath
-			log sipsCommand
-			do shell script sipsCommand
-		end if
-	end if
 
 	tell application "System Events"
 		keystroke keychar
