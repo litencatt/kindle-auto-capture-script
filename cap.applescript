@@ -1,34 +1,34 @@
--- å¯¾è±¡ã‚¢ãƒ—ãƒª
+-- ‘ÎÛƒAƒvƒŠ
 set target to "Kindle"
 
--- ä¿å­˜ãƒ•ã‚©ãƒ«ãƒ€
-set savepath to "~/Desktop/DfD/"
+-- •Û‘¶ƒtƒHƒ‹ƒ_
+set savepath to "~/Desktop/Test/"
 
--- é–‹å§‹ãƒ•ã‚¡ã‚¤ãƒ«ç•ªå·
+-- ŠJnƒtƒ@ƒCƒ‹”Ô†
 set spage to 1
 
--- ãƒšãƒ¼ã‚¸æ•°
+-- ƒy[ƒW”
 set pages to 400
 
--- ã‚ãã‚Šæ–¹å‘(1=å·¦ 2=å³)
+-- ‚ß‚­‚è•ûŒü(1=¶ 2=‰E)
 set pagedir to 2
 
--- ãƒšãƒ¼ã‚¸ã‚ãã‚Šã‚¦ã‚¨ã‚¤ãƒˆ(ç§’)
+-- ƒy[ƒW‚ß‚­‚èƒEƒGƒCƒg(•b)
 set pausetime to 1.0
 
--- åˆ‡ã‚ŠæŠœãç”»åƒoffset(å·¦ä¸Šã‹ã‚‰)
+-- Ø‚è”²‚«‰æ‘œoffset(¶ã‚©‚ç)
 set offsetx to 100
 set offsety to 180
 set cropOffSet to " --cropOffset " & offsety & " " & offsetx & " "
 log cropOffSet
 
--- åˆ‡ã‚ŠæŠœãã‚µã‚¤ã‚º(å·¦ä¸Šã‹ã‚‰ã‹ã‚‰)
+-- Ø‚è”²‚«ƒTƒCƒY(¶ã‚©‚ç‚©‚ç)
 set cropx to 3200
 set cropy to 1950
 set cropXy to " -c " & cropy & " " & cropx & " "
 log cropXy
 
--- ãƒªã‚µã‚¤ã‚ºæ¨ª(åˆ‡ã‚ŠæŠœãå‰ã®ã‚µã‚¤ã‚ºæ›ç®—=ç”»é¢æ¨ª/åˆ‡ã‚ŠæŠœãæ¨ª*ä»•ä¸ŠãŒã‚Šæ¨ª)
+-- ƒŠƒTƒCƒY‰¡(Ø‚è”²‚­‘O‚ÌƒTƒCƒYŠ·Z=‰æ–Ê‰¡/Ø‚è”²‚«‰¡*dã‚ª‚è‰¡)
 set resizew to 0
 
 if pagedir = 1 then
