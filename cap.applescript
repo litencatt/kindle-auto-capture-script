@@ -7,13 +7,10 @@ do shell script "mkdir " & savepath
 
 -- 開始ファイル番号
 set spage to 1
-
 -- ページ数
 set pages to 400
-
 -- めくり方向(1=左 2=右)
 set pagedir to 2
-
 -- ページめくりウエイト(秒)
 set pausetime to 1.0
 
