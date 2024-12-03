@@ -3,6 +3,7 @@ set target to "Kindle"
 
 -- 保存フォルダ
 set savepath to "~/Desktop/Test/"
+do shell script "mkdir " & savepath
 
 -- 開始ファイル番号
 set spage to 1
